@@ -1,5 +1,159 @@
 [
   {
+    "id": "pond-lite",
+    "name": "Pond Lite",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Arcade",
+    "thumbnail": "",
+    "thumbnail_square": false,
+    "url": "https://html5world.github.io/pond-lite/",
+    "featured": true,
+    "tags": [
+      "pond",
+      "lite"
+    ],
+    "updated": "2026-11-18T14:47:59Z",
+    "homepage": "https://github.com/HTML5World/pond-lite",
+    "orientation": "landscape"
+  },
+  {
+    "id": "particle-clicker",
+    "name": "Particle Clicker",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Arcade",
+    "thumbnail": "https://html5world.github.io/assets/particle-clicker.png",
+    "thumbnail_square": true,
+    "url": "https://html5world.github.io/particle-clicker/",
+    "featured": true,
+    "tags": [
+      "particle",
+      "clicker"
+    ],
+    "updated": "2026-11-18T14:47:53Z",
+    "homepage": "https://github.com/HTML5World/particle-clicker",
+    "orientation": "landscape"
+  },
+  {
+    "id": "paint-run2",
+    "name": "Paint Run2",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Arcade",
+    "thumbnail": "",
+    "thumbnail_square": false,
+    "url": "https://html5world.github.io/paint-run2/",
+    "featured": true,
+    "tags": [
+      "paint",
+      "run2"
+    ],
+    "updated": "2026-11-18T14:44:05Z",
+    "homepage": "https://github.com/HTML5World/paint-run2",
+    "orientation": "landscape"
+  },
+  {
+    "id": "pacman-lite",
+    "name": "Pacman Lite",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Arcade",
+    "thumbnail": "https://html5world.github.io/assets/pacman-lite.png",
+    "thumbnail_square": true,
+    "url": "https://html5world.github.io/pacman-lite/",
+    "featured": true,
+    "tags": [
+      "pacman",
+      "lite"
+    ],
+    "updated": "2026-11-18T14:43:33Z",
+    "homepage": "https://github.com/HTML5World/pacman-lite",
+    "orientation": "landscape"
+  },
+  {
+    "id": "NS-SHAFT",
+    "name": "Ns Shaft",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Arcade",
+    "thumbnail": "https://html5world.github.io/assets/ns-shaft.png",
+    "thumbnail_square": true,
+    "url": "https://html5world.github.io/NS-SHAFT/",
+    "featured": false,
+    "tags": [
+      "ns",
+      "shaft"
+    ],
+    "updated": "2026-11-18T14:42:50Z",
+    "homepage": "https://github.com/HTML5World/NS-SHAFT",
+    "orientation": "landscape"
+  },
+  {
+    "id": "missile-game",
+    "name": "Missile Game",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Arcade",
+    "thumbnail": "https://html5world.github.io/assets/missile-game.png",
+    "thumbnail_square": true,
+    "url": "https://html5world.github.io/missile-game/",
+    "featured": false,
+    "tags": [
+      "missile",
+      "game"
+    ],
+    "updated": "2026-11-18T14:41:44Z",
+    "homepage": "https://github.com/HTML5World/missile-game",
+    "orientation": "landscape"
+  },
+  {
+    "id": "tjmj",
+    "name": "Tjmj",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Arcade",
+    "thumbnail": "",
+    "thumbnail_square": false,
+    "url": "https://html5world.github.io/tjmj/",
+    "featured": false,
+    "tags": [
+      "tjmj"
+    ],
+    "updated": "2026-11-18T14:41:16Z",
+    "homepage": "https://github.com/HTML5World/tjmj",
+    "orientation": "landscape"
+  },
+  {
+    "id": "game-off-2013",
+    "name": "Game Off 2013",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Arcade",
+    "thumbnail": "",
+    "thumbnail_square": false,
+    "url": "https://html5world.github.io/game-off-2013/",
+    "featured": false,
+    "tags": [
+      "game",
+      "off",
+      "2013"
+    ],
+    "updated": "2026-11-18T14:39:43Z",
+    "homepage": "https://github.com/HTML5World/game-off-2013",
+    "orientation": "landscape"
+  },
+  {
+    "id": "the-house-game",
+    "name": "The House Game",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Arcade",
+    "thumbnail": "",
+    "thumbnail_square": false,
+    "url": "https://html5world.github.io/the-house-game/",
+    "featured": false,
+    "tags": [
+      "the",
+      "house",
+      "game"
+    ],
+    "updated": "2026-11-18T14:36:54Z",
+    "homepage": "https://github.com/HTML5World/the-house-game",
+    "orientation": "landscape"
+  },
+  {
     "id": "hextris-lite",
     "name": "Hextris Lite",
     "description": "Play this free browser game instantly in your browser.",
@@ -7,7 +161,7 @@
     "thumbnail": "https://html5world.github.io/assets/hextris-lite.png",
     "thumbnail_square": true,
     "url": "https://html5world.github.io/hextris-lite/",
-    "featured": true,
+    "featured": false,
     "tags": [
       "hextris",
       "lite"
@@ -24,7 +178,7 @@
     "thumbnail": "https://html5world.github.io/assets/html5-asteroids.png",
     "thumbnail_square": true,
     "url": "https://html5world.github.io/HTML5-Asteroids/",
-    "featured": true,
+    "featured": false,
     "tags": [
       "html5",
       "asteroids"
@@ -41,7 +195,7 @@
     "thumbnail": "https://html5world.github.io/assets/hexgl-lite.png",
     "thumbnail_square": true,
     "url": "https://html5world.github.io/HexGL-lite/",
-    "featured": true,
+    "featured": false,
     "tags": [
       "hex",
       "gl",
@@ -59,7 +213,7 @@
     "thumbnail": "https://html5world.github.io/assets/fire-n-ice.png",
     "thumbnail_square": true,
     "url": "https://html5world.github.io/fire-n-ice/",
-    "featured": true,
+    "featured": false,
     "tags": [
       "fire",
       "n",
