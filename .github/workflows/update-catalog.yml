@@ -1,0 +1,53 @@
+name: Discover games and update library
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/update-catalog.yml"
+      - "scripts/build_catalog.py"
+      - "scripts/config.js"
+
+permissions:
+  contents: write
+  pages: read
+
+concurrency:
+  group: html5-world-game-discovery
+  cancel-in-progress: true
+
+jobs:
+  discover-games:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out portal repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Discover published game repositories
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PAGES_ENABLE_TOKEN: ${{ secrets.PAGES_ENABLE_TOKEN }}
+          GITHUB_OWNER: HTML5World
+          MAIN_REPOSITORY: HTML5World.github.io
+        run: python scripts/build_catalog.py
+
+      - name: Commit generated game library
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add games.json
+          if git diff --cached --quiet; then
+            echo "The game library is already up to date."
+          else
+            git commit -m "Automatically discover published games"
+            git push
+          fi
