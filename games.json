@@ -17,23 +17,6 @@
     "orientation": "landscape"
   },
   {
-    "id": "html5-hearts",
-    "name": "Html5 Hearts",
-    "description": "Play this free browser game instantly in your browser.",
-    "category": "Arcade",
-    "thumbnail": "https://html5world.github.io/assets/html5-hearts.png",
-    "thumbnail_square": true,
-    "url": "https://html5world.github.io/html5-hearts/",
-    "featured": true,
-    "tags": [
-      "html5",
-      "hearts"
-    ],
-    "updated": "2026-11-18T13:58:53Z",
-    "homepage": "https://github.com/HTML5World/html5-hearts",
-    "orientation": "landscape"
-  },
-  {
     "id": "HTML5-Asteroids",
     "name": "Html5 Asteroids",
     "description": "Play this free browser game instantly in your browser.",
@@ -76,7 +59,7 @@
     "thumbnail": "https://html5world.github.io/assets/fire-n-ice.png",
     "thumbnail_square": true,
     "url": "https://html5world.github.io/fire-n-ice/",
-    "featured": false,
+    "featured": true,
     "tags": [
       "fire",
       "n",
