@@ -399,7 +399,7 @@ def discover_games(repositories: list[dict[str, Any]]) -> list[dict[str, Any]]:
                     continue
                 branch, directory, contents = source
                 pages_info = enable_github_pages(name, branch, directory)
-            game = make_game(repo, branch, directory, contents, pages_info)
+            game = make_game(repo, branch, directory, contents, pages_info, portal_logos)
             games.append(game)
             print(f"Discovered: {name} ({branch}:{directory or '/'})")
         except (HTTPError, URLError, TimeoutError, RuntimeError) as exc:
