@@ -16,7 +16,8 @@ import time
 from datetime import datetime, timezone
 from typing import Any
 from urllib.error import HTTPError, URLError
-from urllib.parse import quote, urlencode
+from urllib.parse import quote, urlencode, urlsplit, urlunsplit
+from xml.etree import ElementTree as ET
 from urllib.request import Request, urlopen
 
 OWNER = os.environ.get("GITHUB_OWNER", "HTML5World").strip()
@@ -24,6 +25,9 @@ MAIN_REPOSITORY = os.environ.get("MAIN_REPOSITORY", "HTML5World.github.io").stri
 TOKEN = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN", "")
 PAGES_TOKEN = os.environ.get("PAGES_ENABLE_TOKEN", "")
 OUTPUT = os.environ.get("CATALOG_OUTPUT", "games.json")
+SITE_URL = os.environ.get("SITE_URL", "https://html5world.github.io").strip().rstrip("/")
+SITEMAP_OUTPUT = os.environ.get("SITEMAP_OUTPUT", "sitemap.xml")
+ROBOTS_OUTPUT = os.environ.get("ROBOTS_OUTPUT", "robots.txt")
 API_ROOT = "https://api.github.com"
 USER_AGENT = "HTML5-World-Automatic-Game-Discovery"
 
@@ -409,6 +413,95 @@ def discover_games(repositories: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return games
 
 
+
+def _normalise_site_url(value: str) -> str:
+    parsed = urlsplit(value)
+    if parsed.scheme != "https" or not parsed.netloc or parsed.username or parsed.password:
+        raise ValueError(
+            "SITE_URL must be an absolute HTTPS URL, for example "
+            "https://html5world.github.io"
+        )
+    if parsed.query or parsed.fragment:
+        raise ValueError("SITE_URL must not contain a query string or fragment.")
+    return urlunsplit(("https", parsed.netloc, parsed.path.rstrip("/"), "", ""))
+
+
+def _same_site_url(value: str, site_url: str) -> str | None:
+    """Return a clean absolute HTTPS URL only when it belongs to this portal host."""
+    try:
+        parsed = urlsplit(value.strip())
+        site = urlsplit(site_url)
+        if (
+            parsed.scheme != "https"
+            or not parsed.netloc
+            or parsed.username
+            or parsed.password
+            or parsed.hostname != site.hostname
+            or parsed.port not in (None, 443)
+            or parsed.query
+            or parsed.fragment
+        ):
+            return None
+        path = parsed.path or "/"
+        return urlunsplit(("https", site.netloc, path, "", ""))
+    except (ValueError, AttributeError):
+        return None
+
+
+def _sitemap_lastmod(value: str) -> str | None:
+    if not value:
+        return None
+    try:
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+        return parsed.date().isoformat()
+    except (TypeError, ValueError):
+        return None
+
+
+def generate_search_files(games: list[dict[str, Any]]) -> tuple[str, str]:
+    """Write a sitemap for the homepage and discovered games, plus robots.txt."""
+    site_url = _normalise_site_url(SITE_URL)
+    homepage_url = site_url + "/"
+    sitemap_ns = "http://www.sitemaps.org/schemas/sitemap/0.9"
+    ET.register_namespace("", sitemap_ns)
+    root = ET.Element(f"{{{sitemap_ns}}}urlset")
+
+    urls: dict[str, str | None] = {homepage_url: None}
+    for game in games:
+        raw_url = game.get("url")
+        if not isinstance(raw_url, str):
+            continue
+        clean_url = _same_site_url(raw_url, site_url)
+        if not clean_url:
+            print(f"Skipping non-portal game URL in sitemap: {raw_url}", file=sys.stderr)
+            continue
+        urls[clean_url] = _sitemap_lastmod(str(game.get("updated") or ""))
+
+    for location, lastmod in sorted(urls.items()):
+        entry = ET.SubElement(root, f"{{{sitemap_ns}}}url")
+        ET.SubElement(entry, f"{{{sitemap_ns}}}loc").text = location
+        if lastmod:
+            ET.SubElement(entry, f"{{{sitemap_ns}}}lastmod").text = lastmod
+
+    ET.indent(root, space="  ")
+    sitemap_text = ET.tostring(root, encoding="unicode", xml_declaration=True) + "\n"
+    os.makedirs(os.path.dirname(SITEMAP_OUTPUT) or ".", exist_ok=True)
+    with open(SITEMAP_OUTPUT, "w", encoding="utf-8", newline="\n") as file:
+        file.write(sitemap_text)
+
+    robots_text = (
+        "User-agent: *\n"
+        "Allow: /\n\n"
+        f"Sitemap: {site_url}/sitemap.xml\n"
+    )
+    os.makedirs(os.path.dirname(ROBOTS_OUTPUT) or ".", exist_ok=True)
+    with open(ROBOTS_OUTPUT, "w", encoding="utf-8", newline="\n") as file:
+        file.write(robots_text)
+
+    print(f"Generated {SITEMAP_OUTPUT}: {len(urls)} URL(s).")
+    print(f"Generated {ROBOTS_OUTPUT}.")
+    return SITEMAP_OUTPUT, ROBOTS_OUTPUT
+
 def main() -> None:
     if not OWNER:
         raise RuntimeError("GITHUB_OWNER is empty.")
@@ -420,6 +513,8 @@ def main() -> None:
     with open(OUTPUT, "w", encoding="utf-8") as file:
         json.dump(games, file, ensure_ascii=False, indent=2)
         file.write("\n")
+
+    generate_search_files(games)
 
     stamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     print(f"Generated {OUTPUT}: {len(games)} game(s) discovered. {stamp}")
