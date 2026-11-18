@@ -1,5 +1,161 @@
 [
   {
+    "id": "hextris-lite",
+    "name": "Hextris Lite",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Arcade",
+    "thumbnail": "https://html5world.github.io/assets/hextris-lite.png",
+    "thumbnail_square": true,
+    "url": "https://html5world.github.io/hextris-lite/",
+    "featured": true,
+    "tags": [
+      "hextris",
+      "lite"
+    ],
+    "updated": "2026-11-18T14:01:17Z",
+    "homepage": "https://github.com/HTML5World/hextris-lite",
+    "orientation": "landscape"
+  },
+  {
+    "id": "html5-hearts",
+    "name": "Html5 Hearts",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Arcade",
+    "thumbnail": "https://html5world.github.io/assets/html5-hearts.png",
+    "thumbnail_square": true,
+    "url": "https://html5world.github.io/html5-hearts/",
+    "featured": true,
+    "tags": [
+      "html5",
+      "hearts"
+    ],
+    "updated": "2026-11-18T13:58:53Z",
+    "homepage": "https://github.com/HTML5World/html5-hearts",
+    "orientation": "landscape"
+  },
+  {
+    "id": "HTML5-Asteroids",
+    "name": "Html5 Asteroids",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Arcade",
+    "thumbnail": "https://html5world.github.io/assets/html5-asteroids.png",
+    "thumbnail_square": true,
+    "url": "https://html5world.github.io/HTML5-Asteroids/",
+    "featured": true,
+    "tags": [
+      "html5",
+      "asteroids"
+    ],
+    "updated": "2026-11-18T13:58:22Z",
+    "homepage": "https://github.com/HTML5World/HTML5-Asteroids",
+    "orientation": "landscape"
+  },
+  {
+    "id": "HexGL-lite",
+    "name": "Hex Gl Lite",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Arcade",
+    "thumbnail": "https://html5world.github.io/assets/hexgl-lite.png",
+    "thumbnail_square": true,
+    "url": "https://html5world.github.io/HexGL-lite/",
+    "featured": true,
+    "tags": [
+      "hex",
+      "gl",
+      "lite"
+    ],
+    "updated": "2026-11-18T13:58:21Z",
+    "homepage": "https://github.com/HTML5World/HexGL-lite",
+    "orientation": "landscape"
+  },
+  {
+    "id": "fire-n-ice",
+    "name": "Fire N Ice",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Arcade",
+    "thumbnail": "https://html5world.github.io/assets/fire-n-ice.png",
+    "thumbnail_square": true,
+    "url": "https://html5world.github.io/fire-n-ice/",
+    "featured": false,
+    "tags": [
+      "fire",
+      "n",
+      "ice"
+    ],
+    "updated": "2026-11-18T13:58:08Z",
+    "homepage": "https://github.com/HTML5World/fire-n-ice",
+    "orientation": "landscape"
+  },
+  {
+    "id": "EightQueens",
+    "name": "Eight Queens",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Arcade",
+    "thumbnail": "https://html5world.github.io/assets/EightQueens.png",
+    "thumbnail_square": true,
+    "url": "https://html5world.github.io/EightQueens/",
+    "featured": false,
+    "tags": [
+      "eight",
+      "queens"
+    ],
+    "updated": "2026-11-18T13:58:04Z",
+    "homepage": "https://github.com/HTML5World/EightQueens",
+    "orientation": "landscape"
+  },
+  {
+    "id": "dead-valley",
+    "name": "Dead Valley",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Arcade",
+    "thumbnail": "https://html5world.github.io/assets/dead-valley.png",
+    "thumbnail_square": true,
+    "url": "https://html5world.github.io/dead-valley/",
+    "featured": false,
+    "tags": [
+      "dead",
+      "valley"
+    ],
+    "updated": "2026-11-18T13:56:57Z",
+    "homepage": "https://github.com/HTML5World/dead-valley",
+    "orientation": "landscape"
+  },
+  {
+    "id": "clumsy-bird",
+    "name": "Clumsy Bird",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Arcade",
+    "thumbnail": "https://html5world.github.io/assets/clumsy-bird.png",
+    "thumbnail_square": true,
+    "url": "https://html5world.github.io/clumsy-bird/",
+    "featured": false,
+    "tags": [
+      "clumsy",
+      "bird"
+    ],
+    "updated": "2026-11-18T13:55:53Z",
+    "homepage": "https://github.com/HTML5World/clumsy-bird",
+    "orientation": "landscape"
+  },
+  {
+    "id": "Classic-Pool-Game",
+    "name": "Classic Pool Game",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Sports",
+    "thumbnail": "",
+    "thumbnail_square": false,
+    "url": "https://html5world.github.io/Classic-Pool-Game/",
+    "featured": false,
+    "tags": [
+      "classic",
+      "pool",
+      "game"
+    ],
+    "updated": "2026-11-18T13:54:46Z",
+    "homepage": "https://github.com/HTML5World/Classic-Pool-Game",
+    "orientation": "landscape"
+  },
+  {
     "id": "chess",
     "name": "Chess",
     "description": "Play this free browser game instantly in your browser.",
@@ -7,7 +163,7 @@
     "thumbnail": "https://html5world.github.io/assets/chess.png",
     "thumbnail_square": true,
     "url": "https://html5world.github.io/chess/",
-    "featured": true,
+    "featured": false,
     "tags": [
       "chess"
     ],
@@ -23,7 +179,7 @@
     "thumbnail": "https://html5world.github.io/assets/3d.city.png",
     "thumbnail_square": true,
     "url": "https://html5world.github.io/3d.city/",
-    "featured": true,
+    "featured": false,
     "tags": [
       "3d",
       "city"
@@ -40,7 +196,7 @@
     "thumbnail": "https://html5world.github.io/assets/2048-lite.png",
     "thumbnail_square": true,
     "url": "https://html5world.github.io/2048-lite/",
-    "featured": true,
+    "featured": false,
     "tags": [
       "2048",
       "lite"
