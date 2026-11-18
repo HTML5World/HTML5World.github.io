@@ -1,22 +1,34 @@
 [
   {
-    "id": "2048-Lite",
+    "id": "3d.city",
+    "name": "3d.city",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Arcade",
+    "thumbnail": "",
+    "url": "https://html5world.github.io/3d.city/",
+    "featured": true,
+    "tags": [
+      "3d",
+      "city"
+    ],
+    "updated": "2026-11-18T12:30:09Z",
+    "homepage": "https://github.com/HTML5World/3d.city",
+    "orientation": "landscape"
+  },
+  {
+    "id": "2048-lite",
     "name": "2048 Lite",
-    "description": "A lightweight version of the classic 2048 puzzle game. Combine matching numbered tiles, increase your score and reach the 2048 tile!",
+    "description": "Play this free browser game instantly in your browser.",
     "category": "Puzzle",
     "thumbnail": "",
-    "url": "https://html5world.github.io/2048-Lite/",
+    "url": "https://html5world.github.io/2048-lite/",
     "featured": true,
     "tags": [
       "2048",
-      "puzzle",
-      "numbers",
-      "logic",
-      "brain",
-      "casual"
+      "lite"
     ],
-    "updated": "2026-11-18T09:41:10Z",
-    "homepage": "https://github.com/HTML5World/2048-Lite",
-    "orientation": "portrait"
+    "updated": "2026-11-18T11:52:41Z",
+    "homepage": "https://github.com/HTML5World/2048-lite",
+    "orientation": "landscape"
   }
 ]
