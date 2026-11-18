@@ -37,8 +37,8 @@
     "name": "2048 Lite",
     "description": "Play this free browser game instantly in your browser.",
     "category": "Puzzle",
-    "thumbnail": "https://html5world.github.io/assets/2048-lite.png",
-    "thumbnail_square": true,
+    "thumbnail": "",
+    "thumbnail_square": false,
     "url": "https://html5world.github.io/2048-lite/",
     "featured": true,
     "tags": [
