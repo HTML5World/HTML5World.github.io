@@ -1,5 +1,71 @@
 [
   {
+    "id": "twisty-polyhedra",
+    "name": "Twisty Polyhedra",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Arcade",
+    "thumbnail": "https://html5world.github.io/assets/twisty-polyhedra.png",
+    "thumbnail_square": true,
+    "url": "https://html5world.github.io/twisty-polyhedra/",
+    "featured": true,
+    "tags": [
+      "twisty",
+      "polyhedra"
+    ],
+    "updated": "2026-11-18T15:48:37Z",
+    "homepage": "https://github.com/HTML5World/twisty-polyhedra",
+    "orientation": "landscape"
+  },
+  {
+    "id": "tower_game",
+    "name": "Tower Game",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Arcade",
+    "thumbnail": "",
+    "thumbnail_square": false,
+    "url": "https://html5world.github.io/tower_game/",
+    "featured": true,
+    "tags": [
+      "tower",
+      "game"
+    ],
+    "updated": "2026-11-18T15:48:06Z",
+    "homepage": "https://github.com/HTML5World/tower_game",
+    "orientation": "landscape"
+  },
+  {
+    "id": "taptaptap",
+    "name": "Taptaptap",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Arcade",
+    "thumbnail": "https://html5world.github.io/assets/taptaptap.png",
+    "thumbnail_square": true,
+    "url": "https://html5world.github.io/taptaptap/",
+    "featured": true,
+    "tags": [
+      "taptaptap"
+    ],
+    "updated": "2026-11-18T15:47:39Z",
+    "homepage": "https://github.com/HTML5World/taptaptap",
+    "orientation": "landscape"
+  },
+  {
+    "id": "SNAKISMS",
+    "name": "Snakisms",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Arcade",
+    "thumbnail": "https://html5world.github.io/assets/snakisms.png",
+    "thumbnail_square": true,
+    "url": "https://html5world.github.io/SNAKISMS/",
+    "featured": true,
+    "tags": [
+      "snakisms"
+    ],
+    "updated": "2026-11-18T15:47:13Z",
+    "homepage": "https://github.com/HTML5World/SNAKISMS",
+    "orientation": "landscape"
+  },
+  {
     "id": "pond-lite",
     "name": "Pond Lite",
     "description": "Play this free browser game instantly in your browser.",
@@ -7,7 +73,7 @@
     "thumbnail": "",
     "thumbnail_square": false,
     "url": "https://html5world.github.io/pond-lite/",
-    "featured": true,
+    "featured": false,
     "tags": [
       "pond",
       "lite"
@@ -24,7 +90,7 @@
     "thumbnail": "https://html5world.github.io/assets/particle-clicker.png",
     "thumbnail_square": true,
     "url": "https://html5world.github.io/particle-clicker/",
-    "featured": true,
+    "featured": false,
     "tags": [
       "particle",
       "clicker"
@@ -41,7 +107,7 @@
     "thumbnail": "",
     "thumbnail_square": false,
     "url": "https://html5world.github.io/paint-run2/",
-    "featured": true,
+    "featured": false,
     "tags": [
       "paint",
       "run2"
@@ -58,7 +124,7 @@
     "thumbnail": "https://html5world.github.io/assets/pacman-lite.png",
     "thumbnail_square": true,
     "url": "https://html5world.github.io/pacman-lite/",
-    "featured": true,
+    "featured": false,
     "tags": [
       "pacman",
       "lite"
