@@ -1,5 +1,20 @@
 [
   {
+    "id": "chess",
+    "name": "Chess",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Puzzle",
+    "thumbnail": "",
+    "url": "https://html5world.github.io/chess/",
+    "featured": true,
+    "tags": [
+      "chess"
+    ],
+    "updated": "2026-11-18T12:31:41Z",
+    "homepage": "https://github.com/HTML5World/chess",
+    "orientation": "landscape"
+  },
+  {
     "id": "3d.city",
     "name": "3d.city",
     "description": "Play this free browser game instantly in your browser.",
