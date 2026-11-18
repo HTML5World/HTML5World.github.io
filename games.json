@@ -4,8 +4,8 @@
     "name": "Chess",
     "description": "Play this free browser game instantly in your browser.",
     "category": "Puzzle",
-    "thumbnail": "",
-    "thumbnail_square": false,
+    "thumbnail": "https://html5world.github.io/assets/chess.png",
+    "thumbnail_square": true,
     "url": "https://html5world.github.io/chess/",
     "featured": true,
     "tags": [
@@ -20,8 +20,8 @@
     "name": "3d.city",
     "description": "Play this free browser game instantly in your browser.",
     "category": "Arcade",
-    "thumbnail": "",
-    "thumbnail_square": false,
+    "thumbnail": "https://html5world.github.io/assets/3d.city.png",
+    "thumbnail_square": true,
     "url": "https://html5world.github.io/3d.city/",
     "featured": true,
     "tags": [
@@ -37,8 +37,8 @@
     "name": "2048 Lite",
     "description": "Play this free browser game instantly in your browser.",
     "category": "Puzzle",
-    "thumbnail": "",
-    "thumbnail_square": false,
+    "thumbnail": "https://html5world.github.io/assets/2048-lite.png",
+    "thumbnail_square": true,
     "url": "https://html5world.github.io/2048-lite/",
     "featured": true,
     "tags": [
