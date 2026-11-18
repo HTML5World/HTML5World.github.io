@@ -192,6 +192,10 @@ button { -webkit-tap-highlight-color: transparent; }
 .game-thumb { position: relative; display: grid; place-items: center; aspect-ratio: 16 / 10; overflow: hidden; background: radial-gradient(circle at 28% 22%, rgba(118, 230, 202, .22), transparent 48%), linear-gradient(135deg, #1c3041, #18253b 58%, #21352f); }
 .game-thumb::after { position: absolute; inset: 48% 0 0; background: linear-gradient(transparent, rgba(5, 10, 17, .25)); content: ""; pointer-events: none; }
 .game-thumb img { position: absolute; z-index: 1; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+.game-thumb-square { aspect-ratio: 1 / 1; }
+.game-thumb img.thumb-logo { padding: 12px; object-fit: contain; }
+.game-thumb-square::after { display: none; }
+
 .game-card:hover .game-thumb img { transform: scale(1.045); }
 .thumb-fallback[hidden] { display: none; }
 .thumb-fallback { position: relative; z-index: 1; display: grid; place-items: center; width: 78px; height: 78px; border: 1px solid rgba(207, 247, 186, .26); border-radius: 23px; color: var(--accent); background: rgba(10, 20, 30, .42); font: 700 33px "Space Grotesk", sans-serif; transform: rotate(-8deg); }
