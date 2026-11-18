@@ -38,16 +38,17 @@ jobs:
           PAGES_ENABLE_TOKEN: ${{ secrets.PAGES_ENABLE_TOKEN }}
           GITHUB_OWNER: HTML5World
           MAIN_REPOSITORY: HTML5World.github.io
+          SITE_URL: https://html5world.github.io
         run: python scripts/build_catalog.py
 
       - name: Commit generated game library
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add games.json
+          git add games.json sitemap.xml robots.txt
           if git diff --cached --quiet; then
             echo "The game library is already up to date."
           else
-            git commit -m "Automatically discover published games"
+            git commit -m "Automatically update game catalog and sitemap"
             git push
           fi
