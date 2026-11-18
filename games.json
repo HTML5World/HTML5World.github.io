@@ -1,5 +1,22 @@
 [
   {
+    "id": "colorful-life",
+    "name": "Colorful Life",
+    "description": "Play this free browser game instantly in your browser.",
+    "category": "Arcade",
+    "thumbnail": "https://html5world.github.io/assets/colorful-life.png",
+    "thumbnail_square": true,
+    "url": "https://html5world.github.io/colorful-life/",
+    "featured": true,
+    "tags": [
+      "colorful",
+      "life"
+    ],
+    "updated": "2026-11-18T15:54:44Z",
+    "homepage": "https://github.com/HTML5World/colorful-life",
+    "orientation": "landscape"
+  },
+  {
     "id": "twisty-polyhedra",
     "name": "Twisty Polyhedra",
     "description": "Play this free browser game instantly in your browser.",
@@ -57,7 +74,7 @@
     "thumbnail": "https://html5world.github.io/assets/snakisms.png",
     "thumbnail_square": true,
     "url": "https://html5world.github.io/SNAKISMS/",
-    "featured": true,
+    "featured": false,
     "tags": [
       "snakisms"
     ],
