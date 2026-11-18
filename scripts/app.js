@@ -28,15 +28,16 @@
     const destination = safeHttpUrl(game.url);
     const fallback = esc(String(game.name || "H5").slice(0, 2).toUpperCase());
     const image = thumbnail
-      ? `<img src="${esc(thumbnail)}" alt="" loading="lazy" onload="this.nextElementSibling.hidden=true" onerror="this.hidden=true;this.nextElementSibling.hidden=false">`
+      ? `<img class="${game.thumbnail_square ? "thumb-logo" : ""}" src="${esc(thumbnail)}" alt="" loading="lazy" onload="this.nextElementSibling.hidden=true" onerror="this.hidden=true;this.nextElementSibling.hidden=false">`
       : "";
+    const thumbClass = game.thumbnail_square ? "game-thumb game-thumb-square" : "game-thumb";
     const featuredBadge = game.featured ? '<span class="game-badge">✦ FEATURED</span>' : "";
     const category = esc(game.category || "Arcade");
     const description = esc(game.description || "Play this game free in your browser.");
 
     if (!destination) return "";
     return `<a class="game-card" href="${esc(destination)}" aria-label="Play ${esc(game.name)}">
-      <div class="game-thumb">${image}<span class="thumb-fallback" ${thumbnail ? "hidden" : ""}>${fallback}</span>${featuredBadge}<span class="thumb-play" aria-hidden="true">▶</span></div>
+      <div class="${thumbClass}">${image}<span class="thumb-fallback" ${thumbnail ? "hidden" : ""}>${fallback}</span>${featuredBadge}<span class="thumb-play" aria-hidden="true">▶</span></div>
       <div class="game-meta"><div class="game-title-row"><h3>${esc(game.name)}</h3><span class="card-arrow" aria-hidden="true">↗</span></div>
         <p>${description}</p><div class="game-bottom"><span class="game-category">${category}</span><span class="play-link">PLAY NOW</span></div></div>
     </a>`;
