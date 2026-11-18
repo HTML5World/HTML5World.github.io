@@ -1,0 +1,22 @@
+[
+  {
+    "id": "2048-Lite",
+    "name": "2048 Lite",
+    "description": "A lightweight version of the classic 2048 puzzle game. Combine matching numbered tiles, increase your score and reach the 2048 tile!",
+    "category": "Puzzle",
+    "thumbnail": "",
+    "url": "https://html5world.github.io/2048-Lite/",
+    "featured": true,
+    "tags": [
+      "2048",
+      "puzzle",
+      "numbers",
+      "logic",
+      "brain",
+      "casual"
+    ],
+    "updated": "2026-11-18T09:41:10Z",
+    "homepage": "https://github.com/HTML5World/2048-Lite",
+    "orientation": "portrait"
+  }
+]
