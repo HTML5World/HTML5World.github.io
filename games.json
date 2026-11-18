@@ -125,8 +125,8 @@
     "name": "Classic Pool Game",
     "description": "Play this free browser game instantly in your browser.",
     "category": "Sports",
-    "thumbnail": "",
-    "thumbnail_square": false,
+    "thumbnail": "https://html5world.github.io/assets/Classic-Pool-Game.png",
+    "thumbnail_square": true,
     "url": "https://html5world.github.io/Classic-Pool-Game/",
     "featured": false,
     "tags": [
