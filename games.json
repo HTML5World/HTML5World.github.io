@@ -5,6 +5,7 @@
     "description": "Play this free browser game instantly in your browser.",
     "category": "Puzzle",
     "thumbnail": "",
+    "thumbnail_square": false,
     "url": "https://html5world.github.io/chess/",
     "featured": true,
     "tags": [
@@ -20,6 +21,7 @@
     "description": "Play this free browser game instantly in your browser.",
     "category": "Arcade",
     "thumbnail": "",
+    "thumbnail_square": false,
     "url": "https://html5world.github.io/3d.city/",
     "featured": true,
     "tags": [
@@ -36,6 +38,7 @@
     "description": "Play this free browser game instantly in your browser.",
     "category": "Puzzle",
     "thumbnail": "",
+    "thumbnail_square": false,
     "url": "https://html5world.github.io/2048-lite/",
     "featured": true,
     "tags": [
