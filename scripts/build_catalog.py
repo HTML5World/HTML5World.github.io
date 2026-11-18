@@ -337,15 +337,40 @@ def detect_category(repo: dict[str, Any]) -> str:
     return "Arcade"
 
 
+def load_portal_logos(assets_directory: str = "assets") -> dict[str, str]:
+    """Map root assets such as assets/2048-lite.png to matching repository names."""
+    logos: dict[str, str] = {}
+    if not os.path.isdir(assets_directory):
+        return logos
+
+    site_url = SITE_URL.rstrip("/")
+    for filename in sorted(os.listdir(assets_directory)):
+        file_path = os.path.join(assets_directory, filename)
+        stem, extension = os.path.splitext(filename)
+        if not os.path.isfile(file_path) or not stem or extension.lower() not in IMAGE_EXTENSIONS:
+            continue
+        # Repository names are case-insensitive for matching purposes.
+        logos.setdefault(
+            stem.casefold(),
+            f"{site_url}/assets/{quote(filename, safe='')}",
+        )
+    return logos
+
+
 def make_game(
     repo: dict[str, Any], branch: str, directory: str,
     contents: list[dict[str, Any]], pages_info: dict[str, Any],
+    portal_logos: dict[str, str] | None = None,
 ) -> dict[str, Any]:
     repo_name = str(repo["name"])
     name = make_title(repo_name)
     description = str(repo.get("description") or "Play this free browser game instantly in your browser.").strip()
     category = detect_category(repo)
-    thumbnail = detect_thumbnail(repo, branch, directory, contents)
+
+    # A matching portal asset takes priority over repository artwork. If there
+    # is no match, preserve the existing thumbnail detection behaviour.
+    custom_logo = (portal_logos or {}).get(repo_name.casefold())
+    thumbnail = custom_logo or detect_thumbnail(repo, branch, directory, contents)
 
     game_url = pages_info.get("html_url")
     if not isinstance(game_url, str) or not game_url.startswith(("https://", "http://")):
@@ -361,6 +386,7 @@ def make_game(
         "description": description,
         "category": category,
         "thumbnail": thumbnail,
+        "thumbnail_square": bool(custom_logo),
         "url": game_url,
         "featured": False,
         "tags": list(dict.fromkeys(tags))[:12],
@@ -370,9 +396,14 @@ def make_game(
     }
 
 
-def discover_games(repositories: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def discover_games(
+    repositories: list[dict[str, Any]],
+    portal_logos: dict[str, str] | None = None,
+) -> list[dict[str, Any]]:
     games: list[dict[str, Any]] = []
     skipped = 0
+    if portal_logos is None:
+        portal_logos = load_portal_logos()
 
     for repo in repositories:
         name = str(repo.get("name") or "")
