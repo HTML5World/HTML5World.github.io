@@ -11,6 +11,7 @@ on:
       - ".github/workflows/update-catalog.yml"
       - "scripts/build_catalog.py"
       - "scripts/config.js"
+      - "assets/**"
 
 permissions:
   contents: write
